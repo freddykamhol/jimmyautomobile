@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 
 const staticHtmlRoutes = () => ({
@@ -24,7 +24,14 @@ const staticHtmlRoutes = () => ({
       // A fresh installation may not have a vehicle database yet.
     }
 
-    const shell = readFileSync('dist/index.html', 'utf8')
+    const builtShell = join('dist', 'src', 'page', 'index.html')
+    const shell = readFileSync(builtShell, 'utf8').replaceAll('../../assets/', './assets/')
+    mkdirSync('dist', { recursive: true })
+    writeFileSync('dist/index.html', shell, 'utf8')
+    // The production host serves the repository root directly. Keep a built
+    // root entry point there as well as the normal dist output.
+    writeFileSync('index.html', shell, 'utf8')
+    cpSync('dist/assets', 'assets', { recursive: true, force: true })
     for (const route of routes) {
       const target = join('dist', route, 'index.html')
       const depth = route.split('/').length
@@ -42,6 +49,11 @@ export default defineConfig({
   // The site also runs below a repository path (for example GitHub Pages).
   base: './',
   plugins: [staticHtmlRoutes()],
+  build: {
+    rollupOptions: {
+      input: { main: 'src/page/index.html' },
+    },
+  },
   server: {
     proxy: {
       '/api': 'http://127.0.0.1:3000',
