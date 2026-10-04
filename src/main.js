@@ -267,6 +267,7 @@ function openPrivacyModal(){
 }
 
 document.addEventListener('click',event=>{const button=event.target.closest('[data-modal="privacy"]');if(!button)return;event.preventDefault();event.stopImmediatePropagation();openPrivacyModal()},true)
+const reviewFilterObserver=new MutationObserver(()=>document.querySelectorAll('.review-card').forEach(card=>{const stars=card.querySelector('.review-stars')?.textContent||'';if((stars.match(/★/g)||[]).length<4)card.remove()}));reviewFilterObserver.observe(document.body,{childList:true,subtree:true})
 function toast(msg){let t=document.createElement('div');t.className='toast';t.innerHTML=`${icon('check')}<span>${msg}</span>`;document.body.appendChild(t);setTimeout(()=>t.classList.add('show'),10);setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300)},4000)}
 window.addEventListener('popstate',()=>{const [view,data]=routeFromLocation();render(view,data,false)})
 async function bootstrap(){await loadVehicles();let [initialView,initialData]=routeFromLocation();if(initialView==='detail')initialData=cars.find(c=>c.id===initialData?.id)||cars.find(c=>location.pathname.includes(c.id));render(initialView,initialData,false);if(!initialView.startsWith('admin'))return;api('/session').then(async({user})=>{if(!user)return;currentUser=user;if(hasPermission('inquiries'))await loadInquiries();render(initialView,initialData,false)}).catch(()=>{currentUser=null})}

@@ -39,6 +39,7 @@ export async function updateGoogleReviews({ file = DEFAULT_FILE, force = false }
   }
   const payload = await response.json()
   const reviews = (payload.reviews || [])
+    .filter(review => Number(review.rating) >= 4)
     .filter(review => String(review.text?.text || '').trim())
     .sort((a, b) => new Date(b.publishTime) - new Date(a.publishTime))
     .map(review => ({
