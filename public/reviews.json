@@ -1,0 +1,49 @@
+{
+  "updatedAt": "2026-10-04T11:36:54.207Z",
+  "source": "Google Places",
+  "placeId": "ChIJE5RCZDrkukcRznQIoHZcz3o",
+  "averageRating": 4.5,
+  "totalReviewCount": 53,
+  "reviews": [
+    {
+      "id": "places/ChIJE5RCZDrkukcRznQIoHZcz3o/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xCNmVHdDVTbFpPUjJkRlRuYzVlR0pzVTFOblQxRRAB",
+      "name": "Dennis Pollmeier",
+      "rating": 5,
+      "text": "Ich Habe schon ein Paar Autos bei ihm gekauft alle top und genau so wie beschrieben immer wieder gern",
+      "createdAt": "2026-03-23T15:37:56.185603437Z",
+      "updatedAt": "2026-03-23T15:37:56.185603437Z"
+    },
+    {
+      "id": "places/ChIJE5RCZDrkukcRznQIoHZcz3o/reviews/ChdDSUhNMG9nS0VJQ0FnTUNZM0xhaHl3RRAB",
+      "name": "Michael Poersch",
+      "rating": 1,
+      "text": "Warnung! Wer hier ein Auto kauft, sollte genau schauen, wer als Verkäufer im Kaufvertrag steht. Bei mir war es nicht das Handelsunternehmen, sondern der Sohn des Inhabers als Privatperson. So schummelt man sich aus der Gewährleistung. Das gekaufte Fahrzeug entpuppte sich als nicht verkehrssicher mit gravierenden Mängeln.",
+      "createdAt": "2025-05-02T11:32:44.575089Z",
+      "updatedAt": "2025-05-02T11:32:44.575089Z"
+    },
+    {
+      "id": "places/ChIJE5RCZDrkukcRznQIoHZcz3o/reviews/ChZDSUhNMG9nS0VJQ0FnSUNKLXVuX1pBEAE",
+      "name": "Sarah Niedermark",
+      "rating": 5,
+      "text": "Haben ein tollen Golf gekauft. Sehr zufrieden. Super Beratung, toller Service. Sehr freundlich und zuvorkommen.\nHier wird nach dem passenden Auto für einen gesucht.",
+      "createdAt": "2023-06-25T20:43:06.488628Z",
+      "updatedAt": "2023-06-25T20:43:06.488628Z"
+    },
+    {
+      "id": "places/ChIJE5RCZDrkukcRznQIoHZcz3o/reviews/ChdDSUhNMG9nS0VJQ0FnSUNRcWZQRjlRRRAB",
+      "name": "Jennifer Queren",
+      "rating": 5,
+      "text": "Hab vor kurzem mein Auto hier gekauft,vw golf 4, die Beratung war optimal. es wurde alles besprochen was man wissen muss und ich bin sehr zufrieden mit dem Auto. Empfehle ich weiter\nFreundlicher Händler\nImmer wieder gerne",
+      "createdAt": "2018-06-27T13:47:07.435Z",
+      "updatedAt": "2018-06-27T13:47:07.435Z"
+    },
+    {
+      "id": "places/ChIJE5RCZDrkukcRznQIoHZcz3o/reviews/ChdDSUhNMG9nS0VJQ0FnSUN3bG9XNzdnRRAB",
+      "name": "Dennis Fox",
+      "rating": 5,
+      "text": "Habe schon mein zweites Auto dort gekauft! Ein netter Autohändler, der immer hilfsbereit ist und einem nichts andreht, was man nicht will! Faire Preise und große Auswahl. Sehr kompetenter und äußerst freundlicher Händler. Fahre gerne vorbei und schaue mich um!",
+      "createdAt": "2017-06-07T20:06:14.522Z",
+      "updatedAt": "2017-06-07T20:06:14.522Z"
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+.vehicle-create-form {
+  display: grid;
+  gap: 24px;
+}
+
+.vehicle-create-form .form-section {
+  border: 1px solid #dfe3e5;
+  background: #fff;
+  padding: 32px;
+  box-shadow: 0 10px 35px rgba(7, 28, 48, 0.045);
+}
+
+.vehicle-create-form .equipment-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.vehicle-create-form .equipment-actions button {
+  appearance: none;
+  border: 1px solid #cfd7dc;
+  background: #fff;
+  color: #30495d;
+  padding: 9px 13px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.vehicle-create-form .equipment-actions button:hover {
+  border-color: #071c30;
+  color: #071c30;
+}
+
+.vehicle-create-form .equipment-actions span {
+  margin-left: auto;
+  color: #687684;
+  font-size: 11px;
+}
+
+.vehicle-create-form .equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.vehicle-create-form .equipment-grid label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.vehicle-create-form .equipment-grid input[type="checkbox"] {
+  position: absolute !important;
+  inset: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.vehicle-create-form .equipment-grid label > span {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #dfe3e5;
+  background: #fbfaf7;
+  color: #526471;
+  padding: 11px 13px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: .18s ease;
+}
+
+.vehicle-create-form .equipment-grid label > span .icon {
+  width: 15px;
+  opacity: .25;
+}
+
+.vehicle-create-form .equipment-grid input:checked + span {
+  border-color: #071c30;
+  background: #071c30;
+  color: #fff;
+}
+
+.vehicle-create-form .equipment-grid input:checked + span .icon {
+  opacity: 1;
+}
+
+.image-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.image-editor-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dfe3e5;
+  background: #fff;
+}
+
+.image-thumb {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+}
+
+.image-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-thumb span {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: #f3efe6;
+  color: #071c30;
+  padding: 7px 9px;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.image-editor-body {
+  padding: 15px;
+}
+
+.image-editor-body > b,
+.image-editor-body > small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.image-editor-body > b {
+  font-size: 12px;
+}
+
+.image-editor-body > small {
+  margin: 4px 0 11px;
+  color: #687684;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.image-category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.image-category-buttons button {
+  appearance: none;
+  border: 1px solid #d7dde0;
+  background: #fff;
+  color: #687684;
+  padding: 7px 9px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.image-category-buttons button:hover,
+.image-category-buttons button.active {
+  border-color: #071c30;
+  background: #071c30;
+  color: #fff;
+}
+
+.vehicle-create-form .custom-equipment {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid #dfe3e5;
+}
+
+.vehicle-create-form .custom-equipment > label {
+  display: block;
+  color: #294256;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.vehicle-create-form .custom-equipment > label > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: stretch;
+  margin-top: 9px;
+  border: 1px solid #ccd5db;
+  background: #fff;
+  transition: border-color .18s, box-shadow .18s;
+}
+
+.vehicle-create-form .custom-equipment > label > div:focus-within {
+  border-color: #506c81;
+  box-shadow: 0 0 0 3px rgba(64, 91, 111, .09);
+}
+
+.vehicle-create-form .custom-equipment input#customEquipmentInput {
+  width: 100%;
+  min-width: 0;
+  height: 52px;
+  margin: 0;
+  padding: 0 16px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 13px;
+}
+
+.vehicle-create-form .custom-equipment button#addEquipment {
+  height: 52px;
+  min-height: 0;
+  margin: 0;
+  padding: 0 22px;
+  border-left: 1px solid #ccd5db;
+  background: #071c30;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.vehicle-create-form .custom-equipment button#addEquipment:hover {
+  background: #12344f;
+  transform: none;
+}
+
+.vehicle-create-form .equipment-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 0;
+  margin-top: 12px;
+}
+
+.vehicle-create-form .equipment-tags:empty {
+  display: none;
+}
+
+.vehicle-create-form .equipment-tags button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  padding: 9px 11px 9px 13px;
+  border: 1px solid #d8dee2;
+  background: #f3efe6;
+  color: #203b50;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.vehicle-create-form .equipment-tags button:hover {
+  border-color: #aab8c1;
+  background: #ebe5d9;
+}
+
+.vehicle-create-form .equipment-tags button span {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  border-radius: 50%;
+  place-items: center;
+  background: rgba(7, 28, 48, .09);
+  color: #536878;
+  font-size: 14px;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .vehicle-create-form .equipment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .vehicle-create-form .form-section {
+    padding: 22px 18px;
+  }
+
+  .vehicle-create-form .equipment-grid,
+  .image-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-create-form .equipment-actions {
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .vehicle-create-form .equipment-actions span {
+    width: 100%;
+    margin: 4px 0 0;
+  }
+
+  .vehicle-create-form .custom-equipment > label > div {
+    grid-template-columns: 1fr;
+  }
+
+  .vehicle-create-form .custom-equipment button#addEquipment {
+    width: 100%;
+    border-top: 1px solid #ccd5db;
+    border-left: 0;
+  }
+}

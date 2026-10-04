@@ -1,0 +1,23 @@
+{
+  "name": "jimmy-automobile",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "node --env-file=.env app.js",
+    "reviews:update": "node --env-file=.env scripts/update-google-reviews.mjs --force",
+    "share:generate": "node scripts/generate-share-assets.mjs",
+    "build": "npm run share:generate && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.6"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "sharp": "^0.35.5",
+    "sharp-cli": "^6.1.0",
+    "vite": "^8.3.0"
+  }
+}
