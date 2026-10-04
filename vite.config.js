@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { copyFileSync, mkdirSync, readFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 
 const staticHtmlRoutes = () => ({
@@ -24,18 +24,23 @@ const staticHtmlRoutes = () => ({
       // A fresh installation may not have a vehicle database yet.
     }
 
+    const shell = readFileSync('dist/index.html', 'utf8')
     for (const route of routes) {
       const target = join('dist', route, 'index.html')
+      const depth = route.split('/').length
+      const prefix = '../'.repeat(depth)
       mkdirSync(dirname(target), { recursive: true })
-      copyFileSync('dist/index.html', target)
+      writeFileSync(target, shell.replaceAll('./assets/', `${prefix}assets/`), 'utf8')
     }
 
     // Static hosts can use the SPA shell for routes created after deployment.
-    copyFileSync('dist/index.html', 'dist/404.html')
+    writeFileSync('dist/404.html', shell, 'utf8')
   },
 })
 
 export default defineConfig({
+  // The site also runs below a repository path (for example GitHub Pages).
+  base: './',
   plugins: [staticHtmlRoutes()],
   server: {
     proxy: {
